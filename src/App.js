@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap';
+import NavSearch from './components/NavSearch';
+import MiApi from './components/MiApi';
 
-function App() {
+const App = () => {
+  const [info, setInfo] = useState([]);
+  const [search, setSearch] = useState('');
+
+  useEffect(() => {
+    const consultarInformacion = async () => {
+      const url = 'https://midas.minsal.cl/farmacia_v2/WS/getLocalesTurnos.php';
+      const respuesta = await fetch(url);
+      const data = await respuesta.json();
+      setInfo(data);
+    };
+    consultarInformacion();
+  }, []);
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const filteredInfo = info.filter((data) => {
+    // filter data by all name address and comuna
+    return (
+      data.local_nombre.toLowerCase().includes(search.toLowerCase()) ||
+      data.local_direccion.toLowerCase().includes(search.toLowerCase()) ||
+      data.comuna_nombre.toLowerCase().includes(search.toLowerCase())
+    );
+  });
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavSearch onSearchChange={handleSearchChange} />
+      <MiApi info={filteredInfo} searchTerm={search} />
     </div>
   );
-}
+};
 
 export default App;
