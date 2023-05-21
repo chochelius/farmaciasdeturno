@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
-import NavSearch from './components/NavSearch';
+import Nav from './components/NavSearch';
 import MiApi from './components/MiApi';
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
   return (
     <>
     <div className="container">
-      <NavSearch onSearchChange={handleSearchChange} />
+      <Nav onSearchChange={handleSearchChange} />
       <MiApi info={filteredInfo} searchTerm={search} />
     </div>
     </>
