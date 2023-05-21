@@ -23,7 +23,7 @@ const App = () => {
   };
 
   const filteredInfo = info.filter((data) => {
-    // filter data by all name address and comuna
+    // filtrar por nombre comuna o dirección
     return (
       data.local_nombre.toLowerCase().includes(search.toLowerCase()) ||
       data.local_direccion.toLowerCase().includes(search.toLowerCase()) ||
@@ -32,10 +32,12 @@ const App = () => {
   });
   
   return (
-    <div>
+    <>
+    <div className="container">
       <NavSearch onSearchChange={handleSearchChange} />
       <MiApi info={filteredInfo} searchTerm={search} />
     </div>
+    </>
   );
 };
 

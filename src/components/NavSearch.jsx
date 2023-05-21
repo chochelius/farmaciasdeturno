@@ -10,18 +10,18 @@ const Nav = ({ onSearchChange }) => {
   
     return (
       <nav className="navbar navbar-light bg-light">
-        <div className="container-fluid px-4">
-          <p className="navbar-brand "><h1 class="display-3 ms-4">Farmacias de turno</h1></p>
+        <div className="container-fluid ms-4">
+          <p className="navbar-brand ms-4"><h1 class="display-4">Farmacias de turno</h1></p>
           <form className="d-flex" onSubmit={handleSubmit}>
             <input
               className="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Buscar"
               aria-label="Search"
               onChange={handleSearchChange}
             />
 
-            <button className="btn btn-outline-success" type="submit">
+            <button className="btn btn-outline-success me-5" type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path
                         fill-rule="evenodd"
