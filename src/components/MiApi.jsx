@@ -1,4 +1,4 @@
-const MiApi = ({info}) => {
+const MiApi = ({info, onSort}) => {
   return (
     <div className="container">
       <div className="row">
@@ -6,11 +6,31 @@ const MiApi = ({info}) => {
           <table className="table table-striped">
             <thead className="bg-primary table-dark">
               <tr>
-                <th scope="col">Nombre</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Comuna</th>
-                <th scope="col">Horario</th>
+                <th scope="col" 
+                    onClick={() => onSort('local_nombre')}
+                >
+                  Nombre
+                </th>
+                <th scope="col" 
+                    onClick={() => onSort('local_direccion')}
+                >
+                  Dirección
+                </th>
+                <th scope="col" 
+                    onClick={() => onSort('local_telefono')}
+                >
+                  Teléfono
+                </th>
+                <th scope="col" 
+                    onClick={() => onSort('comuna_nombre')}
+                >
+                  Comuna
+                </th>
+                <th scope="col" 
+                    onClick={() => onSort('funcionamiento_hora_apertura')}
+                >
+                  Horario
+                </th>
               </tr>
             </thead>
             <tbody>
