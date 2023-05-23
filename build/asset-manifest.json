@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/chochelius/farmaciasdeturno/static/css/main.44f8b8b5.css",
+    "main.js": "/chochelius/farmaciasdeturno/static/js/main.cb5255e1.js",
+    "static/js/787.8001b14d.chunk.js": "/chochelius/farmaciasdeturno/static/js/787.8001b14d.chunk.js",
+    "index.html": "/chochelius/farmaciasdeturno/index.html",
+    "main.44f8b8b5.css.map": "/chochelius/farmaciasdeturno/static/css/main.44f8b8b5.css.map",
+    "main.cb5255e1.js.map": "/chochelius/farmaciasdeturno/static/js/main.cb5255e1.js.map",
+    "787.8001b14d.chunk.js.map": "/chochelius/farmaciasdeturno/static/js/787.8001b14d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.44f8b8b5.css",
+    "static/js/main.cb5255e1.js"
+  ]
+}
