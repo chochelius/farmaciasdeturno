@@ -1,0 +1,11 @@
+{
+  "projects": {
+    "default": "farmaciasdeturno-387000"
+  },
+  "targets": {},
+  "etags": {
+    "farmaciasdeturno-387000": {
+      "extensionInstances": {}
+    }
+  }
+}
