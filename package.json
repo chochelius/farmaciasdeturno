@@ -37,15 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "engines": {
-    "node": "16.x.x"
-  },
-  "hosting": {
-    "site": "farmaciasdeturno-387000",
-    "public": "public",
-    "headers": [
-      {"source": "/service-worker.js", "headers": [{"key": "Cache-Control", "value": "no-cache"}]}
-    ]
   }
 }
