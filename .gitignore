@@ -27,3 +27,4 @@ firebase.json
 firebase-debug.log
 .firebaserc
 /.firebase
+/build/firebase.json
